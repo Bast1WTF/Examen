@@ -1,1 +1,55 @@
-cccc
+from re import I
+#examen
+
+import numpy as np
+asientos = [ [1,2,3,4,5,6,7,8,9,10], [11,12,13,14,15,16,17,18,19,20], [21,22,23,24,25,26,27,28,29,30], [31,32,33,34,35,36,37,38,39,40], [41,42,43,44,45,46,47,48,49,50], [51,52,53,54,55,56,57,58,59,60], [61,62,63,64,65,66,67,68,69,70], [71,72,73,74,75,76,77,78,79,80],[81,82,83,84,85,86,87,88,89,90],[91,92,93,94,95,96,97,98,99,100]]
+i = 0
+dispo = np.array(asientos)
+run = []
+ganancias = []
+
+
+while i == 0:
+  def menu():
+    print(" -----MENU------ ")
+    print(" 1. Comprar entradas ")
+    print(" 2. Mostrar ubicaciones disponible ")
+    print(" 3. Ver listado de asistentes ")
+    print(" 4. Mostrar ganancias totales ")
+    print(" 5. Salir ")
+  menu()
+  opcion = int(input(" Selecciona una opcion "))
+
+  if opcion == 1:
+    print(" Ha entrado a la seccion de comprar entradas, puede comprar de 1 hasta 3 entradas ")
+    
+    entradas = int(input(" Cuantas entradas desea comprar: "))
+    print(" ------ASIENTOS DISPONIBLES------- ")
+    print(dispo)
+    print(" ----------- VALOR DE LAS ENTRADAS:--------------- ")
+    print("Plantinum, $120.000 (Asientos del 1 al 20 )")
+    print("Gold, $80.000 (Asientos del 21 al 50)")
+    print(" Silver, $50.000 (Asientos del 51 al 100)")
+    ubi = int(input(" Ingrese la ubicacion que desea comprar "))
+    print(" su asiento se ha seleccionado de manera correcta")
+    rut = int(input(" Ingrese su rut sin puntos ni digito verificador "))
+  
+  run.extend(rut)
+
+
+  if opcion == 2:
+    print(dispo)
+
+  if opcion == 3:
+    print(run)
+  
+  if opcion == 4:
+    print(ganancias)
+    
+  if opcion == 5:
+    print(" sistema de Bastian Arenas (12-07-2022)")
+    print(" Hasta Luego, Gracias. ")
+    break
+
+
+
